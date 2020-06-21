@@ -46,6 +46,8 @@ fn yet_another_func() -> i32
   // you turn it into a statement, which will then not return
   // a value. Keep this in mind as you explore function return 
   // values and expressions next.
+  //
+  // Also note, expressions do not include ending semicolons.
 
    let x = 22;
 

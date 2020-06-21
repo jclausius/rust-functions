@@ -9,8 +9,8 @@ fn main() {
 
     another_function(243, -3);
 
-    let z = yet_another_func();
-    println!("yet_another_func() returned {}", z);
+    let w = yet_another_func();
+    println!("yet_another_func() returned {}", w);
 
    let x = 6;
 
@@ -20,6 +20,10 @@ fn main() {
    };
 
    println!("value of y is {}", y);
+
+   let z = plus_one(19);
+   println!("The value of z from plus_one(19) is {}", z);
+
 }
 
 fn another_function(x: i32, y: i32) -> i32
@@ -57,7 +61,7 @@ fn yet_another_func() -> i32
        x - 4
    };
 
-   println!("The value of y was assigned from the last epxression in the scope of {}", y);
+   println!("The value of y was assigned from the last expression in the scope of {}", y);
 
   // ( the return value of the function is synonymous 
   //   with the value of the final expression in the 
@@ -69,3 +73,9 @@ fn yet_another_func() -> i32
   //  like below
   x + y
 }
+
+fn plus_one(x: i32) -> i32
+{
+   x + 1
+}
+

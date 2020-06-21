@@ -9,7 +9,8 @@ fn main() {
 
     another_function(243, -3);
 
-    yet_another_func();
+    let z = yet_another_func();
+    println!("yet_another_func() returned {}", z);
 
    let x = 6;
 
@@ -34,11 +35,17 @@ fn another_function(x: i32, y: i32) -> i32
   return x * y;
 }
 
-fn yet_another_func()
+fn yet_another_func() -> i32
 {
   // Calling a function is an expression. 
   // Calling a macro is an expression. 
   // The block used to create new scopes, {}, is an expression
+  //
+  // Note, expressions do not include ending semicolons. 
+  // If you add a semicolon to the end of an expression,
+  // you turn it into a statement, which will then not return
+  // a value. Keep this in mind as you explore function return 
+  // values and expressions next.
 
    let x = 22;
 
@@ -50,4 +57,13 @@ fn yet_another_func()
 
    println!("The value of y was assigned from the last epxression in the scope of {}", y);
 
+  // ( the return value of the function is synonymous 
+  //   with the value of the final expression in the 
+  //   block of the body of a function. 
+  // 
+  // ou can return early from a function by using 
+  // the return keyword... most functions return
+  //  the last expression implicitly
+  //  like below
+  x + y
 }
